@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6 mx-auto">
+    <div class="card mb-3" *ngFor="let contact of ArrayContact" >
+        <div class="card-body d-flex flex-wrap">
+            <p class="lead m-2">Name: {{contact.name}} </p>
+            <p class="lead fw-bold m-2">Cell: {{ contact.cell }}</p>
+
+            <div class="btns">
+                <button name="{{contact._id}}" (click)="deleteContact($event)" class="btn mx-1 btn-danger">Del</button>
+                <a [routerLink]="['/edit', contact._id , contact.name ,contact.cell]" class="btn mx-1 btn-primary">Edit</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

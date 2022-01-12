@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.card,form{
+    animation: show 1s ease;
+}
+    
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
